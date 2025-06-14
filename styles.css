@@ -1,0 +1,212 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #fcbbdf, #f80057);
+    color: #333;
+}
+
+.main-photo {
+  width: 500px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto;
+}
+
+.center-content {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #2e2e2e;
+    margin-top: 10px;
+}
+
+h1 span {
+    color: #ff1e56;
+    font-size: 1.5em;
+    text-shadow: 0 0 10px #ff6e91, 0 0 20px #ff6e91;
+}
+
+p {
+    color: rgb(250, 241, 229);
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 10px auto;
+}
+
+img {
+    max-width: 85%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+
+/* Button styles - enhanced */
+.surprise-btn {
+    padding: 15px 30px;
+    font-size: 1.3em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff1e56, #ff6e91);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 30, 86, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.surprise-btn:hover {
+    background: linear-gradient(45deg, #ff0a4d, #ff5a7f);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(255, 30, 86, 0.6);
+}
+
+.surprise-btn:active {
+    transform: translateY(1px);
+}
+
+/* Surprise box layout - fixed */
+.surprise-box {
+    display: none;
+    width: 80%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background: linear-gradient(145deg, #fff8ee, #fcead2);
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.surprise-box.active {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.surprise-content {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+}
+
+/* Image container - slideshow */
+/* Update the image container and slide styles */
+/* Remove container styles and adjust image sizing */
+.image-container {
+    flex: 1;
+    min-width: 0;
+    border-radius: 15px; /* Keep if you want rounded corners on images */
+    overflow: hidden;
+    /* Remove these if you don't want any shadow or border */
+    box-shadow: none; 
+    border: none;
+    background: transparent; /* Remove any background */
+    height: auto; /* Let height be determined by image */
+}
+
+.slide {
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Control max height if needed */
+    object-fit: contain; /* Show whole image without cropping */
+    display: none;
+    border-radius: 15px; /* Optional - keep if you want rounded corners */
+}
+
+.slide.active {
+    display: block;
+}
+
+/* For a more seamless look, remove all decorative styles */
+.slide {
+    box-shadow: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* If you want images to fill width but maintain aspect ratio */
+.slide {
+    width: 100%;
+    height: auto;
+    max-height: 80vh; /* Optional max height */
+}
+
+
+
+/* Adjust for mobile */
+@media (max-width: 768px) {
+    .image-container {
+        height: autox; /* Slightly smaller on mobile */
+    }
+}
+
+/* Text container - right side */
+.text-container {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+}
+
+.text-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #ff1e56;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-container p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .surprise-box {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .surprise-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .image-container {
+        width: 100%;
+    }
+    
+    .text-container {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .surprise-btn {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+}
+
+/* Footer */
+.footer {
+    font-size: 14px;
+    color: #290101;
+    padding-bottom: 20px;
+    margin-top: 40px;
+}
